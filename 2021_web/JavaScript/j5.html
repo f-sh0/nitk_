@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BadPierrot OfficialTicketSite</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+<style>
+.column {
+  height: 100vh;
+  width: 100%;
+}
+
+.cat1 {
+  background: url(../../images/live1.jpeg) no-repeat top center;
+  background-size: cover;
+}
+
+.cat2 {
+  background: url(../../images/live2.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+@media all and (min-width: 500px) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+h1{
+	font-family: 'Times New Roman', serif;
+	color: white;
+   text-shadow: 2px 2px 3px navy, -2px 2px 3px navy, 2px -2px 3px navy, -2px -2px 3px navy;
+	text-align: center;
+}
+
+h4{
+	text-align: center;
+}
+
+.check{
+	font-family: 'Times New Roman', serif;
+	text-align: center;
+}
+
+p{
+	font-family: 'Times New Roman', serif;
+	text-align: center;
+}
+
+.col-sm-4{
+	font-family: 'Times New Roman', serif;
+	width: 100%;
+	height: 110px;
+}
+
+.tokei{
+	font-family: 'Times New Roman', serif;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+}
+
+.mt-button{
+	text-align: center;
+}
+
+.btn{
+  background: salmon;
+  color: #fff;
+  padding: 16px 400px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition-property: opacity;
+　-webkit-transition-property: opacity;
+  transition-duration: .5s;
+  -webkit-transition-duration: .5s;
+}
+
+.btn:hover {
+  opacity: .7;
+}
+
+.hr1 {
+	border-width: 3px 0 0 0;
+	border-style: dashed;
+	border-color: #FFA500;
+}
+
+</style>
+
+<script>	
+	function arrex(){
+  		var weekChars = ["日","月","火","水","木","金","土"];
+
+  		var e = document.getElementById("tokei");
+  		var t = new Date();
+  		var d = t.toLocaleDateString();
+  		var time = t.toLocaleTimeString();
+		var dayOfWeek = t.getDay();
+
+	//        var str = t + "<br> " + d + "  " + weekChars[dayOfWeek] +  " " + time + " " + t.getTime();
+		
+		var str =  d + "  " + weekChars[dayOfWeek] +  " " + time;
+    		 e.innerHTML = str;
+	}
+
+	var timer1 = setInterval('arrex()',1000);
+
+
+  function checkinDate() {
+    
+      var todayD = new Date();
+      var checkinD = new Date(document.getElementById('mycheckin').value);
+      if (checkinD.getTime() > todayD.getTime()) {
+        document.getElementById('msgcheckin').innerHTML = document.getElementById('mycheckin').value + " 受付中. 空き情報: ○";
+      } else {
+        document.getElementById("msgcheckin").innerHTML = "<strong class='text-danger'>受付終了.</strong>";
+      }
+  }
+
+    function getContacts() {
+      document.getElementById("msgadd").innerHTML = "  ";
+    }
+    function addOption(num,name) {
+      for (let step = 1; step < num+1; step++) {
+        // selectタグを取得する
+        var select = document.getElementById(name);
+      // optionタグを作成する
+        var option = document.createElement("option");
+        option.text = step;
+        option.value = step;
+        select.appendChild(option);
+      }
+              
+    }
+</script>
+
+<form action="../php/actionj5_page.php" method="post">
+
+<!-- 左画面(タイトル画面)作成 -->
+<div class="wrapper">
+  <div class="column cat1">
+    <div class="info">
+      <br><h1> Bad Pierrot 1st Tour</h1>
+      <h1> Official TicketSite</h1>
+		<div class="mt-5 tokei" id="tokei"></div>
+    </div>
+  </div>
+
+<!-- 右画面(登録画面)作成 -->
+<div class="column cat2">
+<div class="info">
+
+<!-- 予約日 -->
+<div class="container mt-3">
+
+<h6 class="check"><span class="text-danger">*回答必須</h6>
+
+<div class="col-sm-4">
+
+<h5><span class="text-danger">*</span>予約日時:</h5>
+<h6><span id="msgcheckin">入力されていません.</span></h6>
+<input id="mycheckin" name="mycheckin" type="date" class="form-control text-center" value="選択なし" onchange="checkinDate()" />
+</div>
+
+<!-- ツアー会場 -->
+<div class="col-sm-4">
+<h5><span class="text-danger">*</span>会場内容:</h5>
+<h6><span id="msglive"> 選択なし</span></h6>
+
+<div class="input-group mt-1">
+<select id="live" name="live" class="form-select text-center" onchange="document.getElementById('msglive').innerHTML = '会場: ' + document.getElementById('live').value"/>
+	<option value="選択なし">選択なし</option>
+   <option value="宮城・セキスイハイム スーパーアリーナ">宮城・セキスイハイム スーパーアリーナ</option>
+   <option value="埼玉・さいたまスーパーアリーナ">埼玉・さいたまスーパーアリーナ</option>
+   <option value="東京・日比谷野外音楽堂">東京・日比谷野外音楽堂</option>
+   <option value="大阪・大阪城ホール">大阪・大阪城ホール</option>
+   <option value="福岡・マリンメッセ福岡A館">福岡・マリンメッセ福岡A館</option>
+	</select>
+<label for="live" class="input-group-text">Venue</label>
+</div>
+</div>
+
+<!-- 人数 -->
+<div class="col-sm-4">
+<h5><span class="text-danger">*</span>人数:</h5> 
+<h6><span id="msgpersons">選択なし</span></h6>
+
+<div class="input-group mt-1">
+<select class="form-select text-center" id="persons" name="persons"  onchange="document.getElementById('msgpersons').innerHTML = '利用人数: '+ document.getElementById('persons').value+'人';"/>
+	<option value="選択なし">選択なし</option>
+		<option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+<label for="persons" class="input-group-text">Persons</label>
+</div>
+</div>
+
+<!-- 代表者情報 -->
+<div class="col-sm-4">
+<label id="msg1" for="phase1" class="display-6"><h5><span class="text-danger">*</span>代表者・名前:</label></h5>
+<div class="input-group mt-1">
+		<label for="phase1" class="input-group-text bg-primary text-light">Name</label>
+		<input id="phase1" name="phase1" type="text" class="form-control" placeholder="e.g. 熊本 太郎" required>
+</div>
+</div>
+
+<div class="col-sm-4">
+<label id="msg2" for="mail" class="display-6"><h5><span class="text-danger">*</span>代表者・メールアドレス:</label></h5>
+<div class="input-group mt-1">
+      <label for="mail" class="input-group-text bg-primary text-light">MailAddress</label>
+      <input type="email" class="form-control" id="mail" placeholder="e.g. hi18fujimoto@g.kumamoto-nct.ac.jp" name="mail" pattern="[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$" required>
+</div> 
+</div>
+
+<div class="col-sm-4">
+<label id="msg3" for="tel" class="display-6"><h5><span class="text-danger">*</span>代表者・電話番号:</label></h5>
+<div class="input-group mt-1">
+		<label for="tel" class="input-group-text bg-primary text-light">PhoneNumber</label>
+		<input type="tel" autocomplete="on"  pattern="^0[789]0-\d{4}-\d{4}$|\d{4}-\d{2}-\d{4}|\d{3}-\d{3}-\d{4}" class="form-control" id="tel" name="tel" placeholder="e.g. 010-2345-6789" required>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- アンケート -->
+<div class="container mt-3">
+<br>
+<hr class="hr1"/> <!-- 区切りライン-->
+<br>
+<div class="col-sm-4">
+<h4>快適で安全なイベント運営のため、以下のアンケートに回答頂くようご協力をお願いしております.</h4>
+<div class="row mt-5">
+<h5>
+Q1. 今回のツアー開催を何で知りましたか?
+</h5>	
+ <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input bg-danger" id="check1" name="optbox[]" value="テレビから(TV)">
+      <label class="form-check-label align-items-end" for="check1">テレビから(TV)</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input bg-success" id="check2" name="optbox[]" value="SNSなどを含むインターネットから(SNS/Internet)">
+      <label class="form-check-label" for="check2">SNSなどを含むインターネットから(SNS/Internet)</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input bg-primary" id="check3" name="optbox[]" value="知人の紹介から(Friends etc..)">
+      <label class="form-check-label" for="check3">知人の紹介から(Friends etc..)</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input bg-info" id="check4" name="optbox[]" value="他のイベント・ツアーから(OtherIvents)">
+      <label class="form-check-label" for="check4">他のイベント・ツアーから(OtherIvents)</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input" style="background-color:orange" id="check5" name="optbox[]" value="その他">
+      <label class="form-check-label" for="check5">その他</label>
+    </div>
+</div>
+
+<h5>
+<br>Q2. BadPierrotの中で、あなたが特に好きなメンバー(推し)がいれば教えてください.
+</h5>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom1" name="member" value="Shion_">
+		<label class="form-check-label" for="cal1">Shion_</label>
+	</div>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom2" name="member" value="Naru_">
+		<label class="form-check-label" for="cal2">Naru_</label>
+	</div>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom3" name="member" value="Mimu_">
+		<label class="form-check-label" for="cal3">Mimu_</label>
+	</div>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom4" name="member" value="Yuxa_">
+		<label class="form-check-label" for="cal4">Yuxa_</label>
+	</div>
+
+<h5>
+<br>Q3. 新型コロナウイルス感染症のワクチン接種状況について
+</h5>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom1" name="covit" value="未接種(Never)">
+		<label class="form-check-label" for="radio1">未接種(Never)</label>
+	</div>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom2" name="covit" value="1回接種(Ones)">
+		<label class="form-check-label" for="radio2">1回接種(Ones)</label>
+	</div>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom3" name="covit" value="2回接種(Twice)">
+		<label class="form-check-label" for="radio3">2回接種(Twice)</label>
+	</div>
+	<div class="form-check form-check-inline mt-3">
+		<input type="radio" class="form-check-input" id="radiom4" name="covit" value="3回接種(Three times)">
+		<label class="form-check-label" for="radio4">3回接種(Three times)</label>
+	</div>
+
+<!-- 問い合わせ用フォーム-->
+<h5>
+<br>お問い合わせフォーム</h5>
+<div class="col-sm-6">
+<textarea class="form-control" rows="5" id="requests" name="requests" placeholder="希望やその他お問い合わせがあればこちらのフォームからご記入ください. Please write your requests here please."></textarea>
+</div>
+
+<br>
+<br>
+<div class="mt-button">
+  <button type="submit" id="submit" name="submit" class="btn" onclick="return confirm('この内容で受付を行います. よろしいですか？')">予約する(Reserve)</button>
+</div>
+<br>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
