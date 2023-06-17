@@ -1,0 +1,290 @@
+<html>
+<head>
+<title>
+css BoxModel & Card3
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+body{
+	background-color:#ccebdf;
+	color:#391522;
+}
+
+a{
+	color:white;
+}
+
+h1{
+	background-color:#391522;
+	color:#ccebdf;
+	font-family: 'Sancramento',cursive;
+	text-align:center;
+}
+
+h2{
+	background-color:#704b59;
+	color:#ccebdf;
+	text-align:center;
+}
+
+.imgS{
+	width:100%;
+	height:200px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgO{
+	width:100%;
+	height:350px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgN{
+	width:100%;
+	height:400px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgI{
+	width:100%;
+	height:500px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgM{
+	width:100%;
+	height:400px;
+	margin:10px 0px;
+	border-radius:50%;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgP{
+	width:100%;
+	height:300px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.kage{
+	margin:15px 0;
+	box-shadow: 2px 5px 6px 0 #558866;
+}
+
+.strShadow{
+	color:white;
+	text-shadow: 2px 2px 3px navy, -2px 2px 3px navy, 2px -2px 3px navy, -2px -2px 3px navy;
+}
+
+.bgBody{
+	background-image:url("../../images/back2b.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+.backSilk{
+	background-image:url("../../images/back2.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+.imgLogo{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	margin:0 10px;
+}
+
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+	  <img class="imgLogo" src="../../images/yuzuburo.jpeg"></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#colnavbar">
+    MENU
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="colnavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="c4.html">日本のお祭り-日本のお祭り種類編-</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="c41.html">日本のお祭り-お祭り楽しむ編-</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="c42.html">日本の行事</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body class="bgBody">
+
+<h1>Japanese Event</h1>
+<div class="container-fluid">
+<h2> Do you know Japanese Events?</h2>
+<button class="btn btn-info text-light" data-toggle="collapse" data-target="#more" style="font-size:small">2~4月の行事</button>
+<button class="btn btn-info text-light" data-toggle="collapse" data-target="#more1" style="font-size:small">5~8月の行事</button>
+<button class="btn btn-info text-light" data-toggle="collapse" data-target="#more2" style="font-size:small">9~1月の行事</button>
+
+<div class="row">
+<div class="col-sm-4">
+
+<div id="more" class="card kage collapse">
+<h5 class="card-title strShadow">2~4月の行事</h5>
+<p class="card-text">2~4月は冬が明け、春になる季節.暖かな気候にあったポップなイベントが多い.
+</p>
+</div>
+
+<div id="more" class="card kage collapse">
+<h5 class="card-title">節分(2/3ごろ)</h5>
+<p class="card-text">
+「鬼は外、福は内」と声をかけながら豆まきをし、悪いことを家から追い払う行事.この日を境に春が始まるともされている.
+</p>
+</div>
+<div id="more" class="collapse">
+<img class="card-img-top imgO" src="../../images/setubun.jpeg">
+<div class="card-body">
+</div>
+</div>
+
+<div id="more" class="card kage collapse">
+<h5 class="card-title">雛祭り(3/3)</h5>
+<p class="card-text">
+女の子の成長と幸せを願う祭り.この日に雛人形や桃の花、ひし餅などを雛壇などに飾り、お祝いする.
+</p>
+</div>
+<div id="more" class="collapse">
+<img class="card-img-top imgO" src="../../images/hinamaturi.jpg">
+<div class="card-body">
+</div>
+</div>
+
+<div id="more" class="card kage collapse">
+<h5 class="card-title">お花見(4月ごろ)</h5>
+<p class="card-text">
+桜の花を見ながら、ご飯やお酒を会社や友人たち、家族と楽しむ行事.桜は古代から日本人の国花として愛され、親しまれてきた.
+</p>
+</div>
+
+<div id="more" class="collapse">
+<img class="card-img-top imgN" src="../../images/hanami.jpeg">
+<div class="card-body">
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div id="more1" class="card kage collapse">
+<h5 class="card-title strShadow">5~8月の行事</h5>
+<p class="card-text">5~8月は春から梅雨を抜け、夏真っ盛り.日本の行事では夏は粛々とした端正な行事が多い.
+</p>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#ffa500">
+<img class="card-img-top"src="../../images/tango.jpeg">
+<div class="card-body">
+<h5 class="card-title">端午の節句(5/5)</h5>
+<p class="card-text">男の子の成長と幸せを願う行事.この日には、鯉のぼりなどを飾り、柏餅やちまきなどを食べてお祝いする.
+</p>
+</div>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#66cdaa">
+<img class="card-img-top"src="../../images/tanabata.jpg">
+<div class="card-body">
+<h5 class="card-title">七夕(7/7)</h5>
+<p class="card-text">一年に一度、天の川で織姫と彦星が出会う日として、願い事をかいた短冊を笹の葉に飾ってお祝いする.
+</p>
+</div>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#f6ad49">
+<img class="card-img-top"src="../../images/unagi.jpg">
+<div class="card-img-overlay">
+<h5 class="card-title text-light">土用の丑(7/21ごろ)</h5>
+<p class="card-text text-light">
+まだ夏の暑さが残る、7/20~8/7の間にある「丑の日」でうなぎを食べ、夏の暑さに負けない体力をつける.
+</p>
+</div>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#dda0dd">
+<img class="card-img-top"src="../../images/obon.jpg">
+<div class="card-body">
+<h5 class="card-title">お盆(7/13~16・8/13~16)</h5>
+<p class="card-text">
+お盆の期間に戻ってくる御先祖様の霊を迎え、再び送り出す行事.家族で集まる機会としてもある.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div id="more2" class="card kage collapse">
+<h5 class="card-title strShadow">9~1月の行事</h5>
+<p class="card-text">9~1月は秋そして冬の季節.冬に向けて一年間の作物の実りに感謝したり、一年の締め括りや始まりを大事にしたりと日本の心を感じる行事が多い.
+</p>
+</div>
+
+<div id="more2" class="card kage collapse">
+<h5 class="card-title">十五夜(9~10月)</h5>
+<p class="card-text">
+旧暦で8/15の満月の日を指す.この日には、月見だんごやすすきをお供えし、月を見て風情を楽しむ行事.
+</p>
+</div>
+<div id="more2" class="collapse">
+<img class="card-img-top imgO" src="../../images/jugoya.jpeg">
+<div class="card-body">
+</div>
+</div>
+
+<div id="more2" class="card kage collapse">
+<h5 class="card-title">冬至(12/22ごろ)</h5>
+<p class="card-text">
+一年の中で最も昼の時間が短く、夜の時間が長い日である.柚子をお風呂に浮かべた柚子風呂などで日頃の疲れを癒す行事.
+</p>
+</div>
+<div id="more2" class="collapse">
+<img class="card-img-top imgO" src="../../images/yuzuburo.jpeg">
+<div class="card-body">
+</div>
+</div>
+
+<div id="more2" class="card kage collapse">
+<h5 class="card-title">七草(1/7)</h5>
+<p class="card-text">
+七種類の薬草をおかゆに入れた七草粥を食べる.一年間の無病息災を願うものとされている.
+</p>
+</div>
+
+<div id="more2" class="collapse">
+<img class="card-img-top imgN" src="../../images/nanakusa.jpeg">
+<div class="card-body">
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>
+css BoxModel & Card2
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+body{
+	background-color:#ccebdf;
+	color:#391522;
+}
+
+a{
+	color:white;
+}
+
+h1{
+	background-color:#391522;
+	color:#ccebdf;
+	font-family: 'Sancramento',cursive;
+	text-align:center;
+}
+
+h2{
+	background-color:#704b59;
+	color:#ccebdf;
+	text-align:center;
+}
+
+.imgS{
+	width:100%;
+	height:200px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgO{
+	width:100%;
+	height:350px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgN{
+	width:100%;
+	height:400px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgI{
+	width:100%;
+	height:500px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgM{
+	width:100%;
+	height:400px;
+	margin:10px 0px;
+	border-radius:50%;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.imgP{
+	width:100%;
+	height:300px;
+	margin:10px 0px;
+	box-Shadow:5px 5px 6px 2px #444444;
+}
+
+.kage{
+	margin:15px 0;
+	box-shadow: 2px 5px 6px 0 #558866;
+}
+
+.strShadow{
+	color:white;
+	text-shadow: 2px 2px 3px navy, -2px 2px 3px navy, 2px -2px 3px navy, -2px -2px 3px navy;
+}
+
+.bgBody{
+	background-image:url("../../images/back1.jpeg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+.backSilk{
+	background-image:url("../../images/back1.jpeg");
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+</style>
+</head>
+
+<body>
+<body class="bgBody">
+
+<h1>Japanese Summer</h1>
+<div class="container-fluid">
+<h2> Let's enjoy Japanese Summer!! </h2>
+<button class="btn btn-info text-light" data-toggle="collapse" data-target="#more" style="font-size:small">花火(Fire works)</button>
+<button class="btn btn-info text-light" data-toggle="collapse" data-target="#more1" style="font-size:small">屋台(Food stalls)</button>
+<button class="btn btn-info text-light" data-toggle="collapse" data-target="#more2" style="font-size:small">服装(Wear)</button>
+
+<div class="row">
+<div class="col-sm-4">
+
+<div id="more" class="card kage collapse">
+<h5 class="card-title strShadow">花火(Fire works)</h5>
+<p class="card-text">花火は日本を代表する夏の風物詩.花火師たちの想いが、火薬と共に花火玉として日本の夏の夜空を彩る.
+</p>
+</div>
+
+<div id="more" class="collapse">
+<img class="card-img-top imgM" src="../../images/IMGP8867.JPG">
+<div class="card-body">
+<p class="card-text"><a href="../../images/IMGP8867.JPG"></a>
+</p>
+</div>
+</div>
+
+<div id="more" class="card kage collapse" background-color="#ffffff">
+<img class="card-img-top" src="../../images/IMGP8939.JPG">
+<p class="card-text" style="background-color:rgba(255,255,255,0.4)">花火は一般的によく知られている丸型だけでなく、変わった形や色のものも存在する.
+</p>
+</div>
+
+<div id="more" class="collapse">
+<img class="card-img-top imgM" src="../../images/IMGP8896.JPG">
+<div class="card-body">
+<p class="card-text"><a href="../../images/IMGP8870.JPG"></a>
+</p>
+</div>
+</div>
+
+<div id="more" class="collapse">
+<img class="card-img-top imgN" src="../../images/IMGP8895.JPG">
+<div class="card-body">
+<p class="card-text"><a href="../../images/IMGP8895.JPG"></a>
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div id="more1" class="card kage collapse">
+<h5 class="card-title strShadow">屋台(Food stalls)</h5>
+<p class="card-text">屋台も祭りといえばの一つ.かき氷や焼きそば、射的などの有名なものからご当地ならではの珍しいお店までが並ぶ、華やかな楽しい空間.
+</p>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#fa8072">
+<img class="card-img-top"src="../../images/wataame.jpg">
+<div class="card-body">
+<h5 class="card-title">綿飴(Wataame)</h5>
+<p class="card-text">砂糖を使った、甘いふわふわとしたお菓子.見た目の楽しさから子供だけでなく大人も楽しめる.最近ではカラフルなものや形が特徴的なものもある.</p>
+</div>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#f6ad49">
+<img class="card-img-top"src="../../images/yakitoumorokosi.jpeg">
+<div class="card-body">
+<h5 class="card-title">焼きとうもろこし(YakiToumorokosi)</h5>
+<p class="card-text">
+とうもろこしにバターや醤油を塗り、こんがりと焼いたもの.祭りの定番メニューの一つで、少し濃いめの味付けがクセになる.
+</p>
+</div>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#f6ad49">
+<img class="card-img-top"src="../../images/kakigori.jpg">
+<div class="card-img-overlay">
+<h5 class="card-title">かき氷(Kakigori)</h5>
+<p class="card-text">
+お祭りといえばの屋台.屋台だけでなく、家庭でも作ることがある.最近はシロップの味も増え、色とりどりなかき氷を楽しむことができる.
+</p>
+</div>
+</div>
+
+<div id="more1" class="card kage collapse" style="background-color:#ffc0cb">
+<img class="card-img-top"src="../../images/ringoame1.jpeg">
+<div class="card-body">
+<h5 class="card-title">りんご飴(RingoAme)</h5>
+<p class="card-text">
+りんごを水飴などでコーティングしたもの.日本では祭りが多いが、外国でもハロウィンなどの定番お菓子となっている.りんご飴を持った浴衣姿の女性は、The日本のお祭りスタイル.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div id="more2" class="card kage collapse">
+<h5 class="card-title strShadow">服装(Wear)</h5>
+<p class="card-text">祭りに行く時に着用することも多い.絵柄や色が多くあることや清涼感のある生地から、夏を感じるものの一つとして現代でも広く親しまれている.
+</p>
+</div>
+
+<div id="more2" class="card kage collapse">
+<h5 class="card-title">浴衣(Yukata)</h5>
+<p class="card-text">浴衣は木綿でできた和服(着物)の一種.日本情緒の雰囲気を味わえ、かつ安価で着用が簡単な民族衣装として外国のお土産としても人気である.
+</p>
+</div>
+<div id="more2" class="collapse">
+<img class="card-img-top imgO" src="../../images/yukata.jpeg">
+<div class="card-body">
+</div>
+</div>
+
+<div id="more2" class="card kage collapse" style="background-color:#f6ad49">
+<img class="card-img-top"src="../../images/zinbe.jpeg">
+<div class="card-img-overlay">
+<h5 class="card-title">甚平(Zinbe)</h5>
+<p class="card-text">
+男性あるいは子供の着る和装の一つ.袖や見頃が全体的にゆったりとしており、風通しが良いので、夏は祭りなど以外に普段の生活から着用する場合もある.</p>
+</div>
+</div>
+
+<div id="more2" class="card kage collapse">
+<h5 class="card-title">法被(Happi)</h5>
+<p class="card-text">日本の伝統衣装で祭りのときに職人などが着用する.襟から胸元にかけて文字は、着用している人の所属や名、またおもてなしの心を示す言葉が刻まれている.
+</p>
+</div>
+
+<div id="more2" class="collapse">
+<img class="card-img-top imgN" src="../../images/happi.jpg">
+<div class="card-body">
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</body>
+</html>
