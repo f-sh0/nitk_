@@ -1,0 +1,282 @@
+<html>
+<head>
+<title>
+The Images of Amakusa
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+main {
+  padding: 50px;
+}
+
+main h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2{
+	font-family: serif;
+	text-align: center;
+	margin: 20px 0;
+	font-size: 1.5rem;
+	letter-spacing: .5em;
+   word-break : break-all;
+}
+
+h3{
+	font-family: serif;
+	text-align: center;
+	margin: 20px 0;
+	font-size: 1.1rem;
+	letter-spacing: .1em;
+   word-break : break-all;
+}
+
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #3f98ef;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#page_top a::after{
+  content: 'TOP';
+  font-size: 13px;
+  color: #fff;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: #3f98ef;
+}
+
+.space{
+	margin:10px 0;
+}
+
+.imgCard{
+	width:100%;
+	height:auto;
+}
+
+.imgCard2{
+	width:100%;
+	height:315;
+}
+
+/*============
+body
+=============*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+a{
+	text-align: center;
+	margin: 20px 0;
+	font-size: 0.9rem;
+	letter-spacing: .2em;
+   word-break : break-all;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+li:nth-child(2){
+    margin-right: 10px;
+    margin-left: 10px;
+}
+li{
+    list-style: none;
+}
+
+</style>
+
+<link rel="stylesheet" href="c7font.css">
+<link rel="stylesheet" href="c7drop.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Sawarabi+Mincho'>
+</head>
+
+<body>
+<header id="header">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#colnavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="colnavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="c7.html">-Home-</a>
+      </li>
+		<li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		-Colors-
+      </a>
+      <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
+         <a class="dropdown-item" href="c7red.html">-Red-</a>
+        	<div class="dropdown-divider"></div>
+         <a class="dropdown-item" href="c7green.html">-Green-</a>
+        	<div class="dropdown-divider"></div>
+         <a class="dropdown-item" href="c7blue.html">-Blue-</a>
+        	<div class="dropdown-divider"></div>
+         <a class="dropdown-item" href="c7white.html">-White-</a>
+        	<div class="dropdown-divider"></div>
+         <a class="dropdown-item" href="c7colorful.html">-Colorful-</a>
+      </div>
+      </li>
+
+		<li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		-Others-
+      </a>
+      <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
+         <a class="dropdown-item" href="#">-Images-</a>
+      </div>
+		</li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<main>
+<p>Photo Folder</p>
+<br>
+<h3>ページに盛り込めなかった, 筆者のふるさとフォト紹介.</h3>
+</main>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img1.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img5.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img14.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img17.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img6.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img11.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img22.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img20.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/hachiman1.jpg">
+	</div>
+</div>
+
+<div class="col-sm-4">
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img7.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img10.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard2" src="../../images/img8.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img21.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img4.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/omiyage2.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/yuuhi1.jpeg">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard2" src="../../images/img16.JPG">
+	</div>
+</div>
+
+<div class="col-sm-4">
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img13.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img9.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img19.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img2.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img18.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img15.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img24.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img23.JPG">
+	</div>
+	<div class="card space">
+		<img class="card-img-top imgCard" src="../../images/img3.JPG">
+	</div>
+</div>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+
+<div id="page_top"><a href="c7images.html"></a></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<html>
+<head>
+<title>
+The colors of Amakusa-Home
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+h3{
+	font-family: serif;
+	text-align: center;
+	margin: 20px 0;
+	font-size: 1.1rem;
+	letter-spacing: .1em;
+   word-break : break-all;
+}
+
+h4{
+	font-family: serif;
+	text-align: center;
+	margin: 20px 0;
+	font-size: 1.4rem;
+	letter-spacing: .1em;
+   word-break : break-all;
+}
+
+/*============
+nav
+=============*/
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+nav .inner {
+  padding: 25px;
+}
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .inner ul li {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+nav .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+@media screen and (max-width: 767px) {
+  nav {
+    left: -220px;
+    width: 220px;
+  }
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+/*============
+main
+=============*/
+main {
+  padding: 50px;
+}
+main h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+/*============
+body
+=============*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+</style>
+<link rel="stylesheet" href="KeyTyping.css">
+<link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+<main>
+<p class="TextTyping">The colors of Amakusa</p>
+<br>
+<h3>「たべるなら」「あそぶなら」「くらすなら」 それなら, "天草"</h3>
+</main>
+<div class="row">
+<div class="col-sm-12">
+<div id = "Slide1" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#Slide1" data-slide-to="0" class="active"></li>
+    <li data-target="#Slide1" data-slide-to="1"></li>
+    <li data-target="#Slide1" data-slide-to="2"></li>
+    <li data-target="#Slide1" data-slide-to="3"></li>
+  </ol>
+   <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 imgSlide" src="../../images/title14.jpeg" width="500" height="485">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 imgSlide" src="../../images/title12.jpeg" width="500" height="485">
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100 imgSlide" src="../../images/title17.jpeg" width="500" height="485">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 imgSlide" src="../../images/title15.jpeg" width="500" height="485">
+    </div>
+
+ 	</div>
+	</div>
+</div>
+</div>
+
+<h4>What's "Amakusa"?</h4>
+<h3>
+<br>天草は大小120余りの島々からなる諸島であり, 
+<br>広大な海・化石などが発掘できる恐竜の島・キリシタン文化を肌で感じることのできる施設など, 
+<br>自然や文化に恵まれたまさに"宝島".
+<br>
+<br>また, 豊富な自然から一年を通して様々な旬の食を堪能することができます.
+<br>
+<br>ここではそんな天草の魅力をたっぷりと伝えるべく, 
+<br>おすすめスポットであったり, 筆者の思い出の場所などを
+<br>"色"という分け方で紹介ページを作成しています.
+<br>
+<br>見て感じるイメージ色の違いやその感覚を楽しんでいただけたらと思います.
+</h3>
+
+</div>
+<div id="navArea">
+
+  <nav>
+    <div class="inner">
+      <ul>
+			&gt; color
+        <li><a href="c7red.html">Red</a></li>
+        <li><a href="c7green.html">Green</a></li>
+        <li><a href="c7blue.html">Blue</a></li>
+        <li><a href="c7white.html">White</a></li>
+        <li><a href="c7colorful.html">Colorful</a></li>
+			<a><br>&gt; others</a>
+		  <li><a href="c7images.html">Images</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="toggle_btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="mask"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="c7.js"></script>
+</body>
+</html>
