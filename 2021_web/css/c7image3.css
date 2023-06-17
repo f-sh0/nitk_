@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+body{
+   word-break: break-all;
+}
+
+#header{
+	position: relative;
+	z-index:999;
+}
+	
+/*全体*/
+
+.ms-section{
+	color:#fff;
+	padding:20px;
+	width: 100%;
+	height: 100vh;
+	background:linear-gradient(45deg, #d7003a,#ff6666,#ffcccc);/*グラデーション*/
+	background-size: 200% 200%;
+	animation: bggradient 20s ease infinite;
+}
+
+@keyframes bggradient{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.ms-section a{
+	color:#fff;
+}
+
+h1{
+	font-size:1.5rem;
+}
+
+h2{
+	font-size:1.0rem;
+	margin:0 0 20px 0;
+	text-align: center;
+}
+
+p{
+	margin:0 0 20px 0;
+}
+
+/*右エリア画像設定*/
+
+#right1{
+	background:url("../../images/yuuhi2.jpeg") no-repeat center;
+	background-size:cover;
+}
+
+#right2{
+	background:url("../../images/tai1.jpeg") no-repeat center;
+	background-size:cover;
+}
+
+#right3{
+	background:url("../../images/omiyage1.JPG") no-repeat center;
+	background-size:cover;
+}
+
+#right4{
+	background:url("../img/hisu-lee-169301-unsplash.jpg") no-repeat center;
+	background-size:cover;
+}
+
+#right5{
+	background:url("../img/jeff-sheldon-3226-unsplash.jpg") no-repeat center;
+	background-size:cover;
+}
+
+#right6{
+	background:url("../img/hisu-lee-169301-unsplash.jpg") no-repeat center;
+	background-size:cover;
+}
+
+/*スマホでの見え方設定*/
+
+@media screen and (max-width:768px){
+	
+#header{
+	justify-content: center;
+}
+
+/*余白をリセット*/
+.ms-section{
+	padding:0;
+}
+
+/*上ぞろえ*/
+.ms-tableCell{
+	vertical-align:top;
+}
+
+/*右エリア非表示*/
+#menu,
+.ms-right{
+	display: none;
+}
+
+/*左エリア画像＋テキストを出す設定*/
+.ms-left{
+	width:100%!important;
+}
+
+/*左エリア上部画像設定*/
+.sp-top{
+	height:50%;
+	margin:0 0 20px 0;
+}
+	
+#left1 .sp-top{
+	background:url("../../images/yuuhi2.jpeg") no-repeat center;
+	background-size:cover;
+}
+
+#left2 .sp-top{
+	background:url("../../images/tai1.jpeg") no-repeat center;
+	background-size:cover;
+}
+
+#left3 .sp-top{
+	background:url("../../images/omiyage1.JPG") no-repeat center;
+	background-size:cover;
+}
+	
+#left4 .sp-top{
+	background:url("../img/daniel-chen-546446-unsplash.jpg") no-repeat center;
+	background-size:cover;
+}
+
+#left5 .sp-top{
+	background:url("../img/hisu-lee-169301-unsplash.jpg") no-repeat center;
+	background-size:cover;
+}
+
+#left6 .sp-top{
+	background:url("../img/jeff-sheldon-3226-unsplash.jpg") no-repeat center;
+	background-size:cover;
+}
+
+/*左エリア下部テキスト余白設定*/
+.sp-bottom{
+	padding:20px;
+}	

@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+body {
+	overflow: hidden;
+}
+
+.flex{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.box{
+	background:#f0f0f0;
+   font-family:'Marcellus', serif,"游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	color: #333;
+	font-size:1rem;
+	line-height:1.85;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%; 
+	word-wrap: break-word;
+
+	width: 380px;
+	padding: 20px;
+    margin: 0 20px 20px 20px;
+	/*background: #666;
+	color: #fff;*/
+	box-sizing:border-box;
+    list-style: none;
+}
+
+.box{
+	opacity: 0;
+}
+
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}

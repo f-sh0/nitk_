@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/*========= レイアウト ===============*/
+p{
+	text-align: center;
+	margin: 20px 0;
+	font-size: 1.5rem;
+	letter-spacing: .5em;
+   word-break : break-all;
+}
+
+.TextTyping {
+	text-align: center;
+}
+

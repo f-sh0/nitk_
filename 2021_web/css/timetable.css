@@ -1,0 +1,61 @@
+.japanese{
+	background-color: #e2ffc6;
+	color:#4c4860; 
+}
+.math{
+	background-color: #b7dbff;
+	color:#8484ff; 
+}
+.science{
+	background-color: #d3ffa8;
+	color:#0047b9; 
+}
+.socienty{
+	background-color: #ffd3a8;
+	color:gray;
+}
+.pe{
+	background-color: #ffa8a8;
+	color:#414141; 
+}
+.music{
+	background-color: #a3a3ff;
+	color:#57443d; 
+}
+.home{
+	background-color: #ffb2ff;
+	color:#21654e; 
+}
+.life{
+	background-color: #ead8e5;
+	color:#142b1a;
+}
+.art{
+	background-color: #a1b9dc;
+	color:#624922;
+}
+.moral{
+	background-color: #93ffc9;
+	color:#ff99ff;
+}
+.yotei{
+	background-color: #d6ffd6;
+	color:#6d4d59; 
+}
+
+#t2{
+	width: 8em;
+	height: 3em;
+	background-color: #ffefe0; 
+	color:#4e4e4e;
+}
+#t1{
+	width: 8em;
+	height: 3em;
+	background-color: #e0ffff; 
+	color:#6d4d59;
+}
+#t1:hover{
+	background-color: gray;
+	color:white;
+}
