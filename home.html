@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<title>体温チェック</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="../css/input.css">
+<style>
+html, body {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.button:hover {
+  background-color: #f2a0a1;
+  box-shadow: 0px 15px 20px rgba(242, 160, 161, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.container{
+	margin:auto;
+	max-width:350px;
+}
+</style>
+</head>
+<body>
+
+<header><span class="text-danger">loo</span><font color="black">k AHead</font></header>
+<div class="container mt-3">
+	<form  id="form" action="../php/home.php" method="post">
+	<div class="row mt-5">
+	  <div class="col-sm-8">
+
+		  <label id="lebel" for="lebel" class="display-6"><span class="text-danger">*</span><font size="5"><font color="black">Lebel:</font></font></label>
+	     <select id="lebel" name="lebel" class="form-select text-center">
+	     <option value="#">Null</option>
+        <option value="personal">個人</option>
+        <option value="group">グループ</option>
+	</select>
+		  
+		  <label id="msg1" for="phase1" class="display-6"><span class="text-danger">*</span><font size="5"><font color="black">ID or GroupName:</font></font></label>
+    		<input id="phase1" name="phase1" type="text" class="form-control mt-2" placeholder="Enter here.">
+
+		<div class="mb-3">
+		<label id="msg2" for="pwd" class="display-6"><span class="text-danger">*</span><font size="5"><font color="black">Password:</font></font></label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter here." name="pwd">
+		</div>
+		
+		<a href="group2.html"target=_blank>グループ新規登録はこちら</a>
+		
+		<div class="wrap">
+  			<button type="submit" id="submit" name="submit" class="button">Login</button>
+		</div>
+	</div>
+	</div>
+	</form>
+
+</div>
+</body>
+</html>
+
